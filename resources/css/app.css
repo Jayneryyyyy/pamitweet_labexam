@@ -1,0 +1,141 @@
+/* Update the Author Badge */
+.badge-author {
+    background-color: #e3f2fd; /* Light blue background for contrast */
+    color: var(--brand-color);
+    font-size: 0.7rem; /* Smaller font */
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px; /* Added spacing from the timestamp */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+/* 1. VARIABLES & BASICS */
+:root {
+    --brand-color: #0d47a1;       /* Deep Navy */
+    --brand-hover: #063175;       /* Darker Navy */
+    --nav-bg: rgba(255, 255, 255, 0.92); /* Translucent White */
+    --footer-bg: #f8f9fa;         /* Light Gray Footer */
+    --surface-white: #ffffff;     /* Pure White Cards */
+    --body-bg: #ffffff;           /* White Body Background */
+    --text-main: #343a40;         /* Dark Gray Text (Softer than black) */
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--body-bg);
+    color: var(--text-main);
+    padding-top: 65px; /* Slightly reduced padding for thinner nav */
+    font-size: 0.95rem; /* Overall font size reduction */
+}
+
+/* 2. NAVBAR (Glass Effect & Thinner) */
+.navbar-custom {
+    background-color: var(--nav-bg) !important;
+    backdrop-filter: blur(10px); /* The "Glass" Effect */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+/* 3. FOOTER (Distinct Color) */
+.app-footer {
+    background-color: var(--footer-bg);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    font-size: 0.85rem; /* Smaller footer text */
+}
+
+/* 4. UTILITIES & COLORS */
+.text-brand { color: var(--brand-color) !important; }
+.bg-cream { background-color: #fdfbf7 !important; } /* Keep for accents if needed */
+
+/* 5. BUTTONS */
+.btn {
+    border-radius: 6px !important; /* Tighter corners */
+    padding: 8px 20px; /* Smaller padding */
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.btn-lg {
+    padding: 10px 24px;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--brand-color) !important;
+    border-color: var(--brand-color) !important;
+    box-shadow: 0 2px 6px rgba(13, 71, 161, 0.15);
+}
+.btn-primary:hover {
+    background-color: var(--brand-hover) !important;
+    transform: translateY(-1px);
+}
+
+
+/* 4. CARD & TWEET STYLING (Increased Spacing Fix) */
+.card-tweet {
+    border: 1px solid rgba(0,0,0,0.05); 
+    border-radius: 12px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    background: var(--surface-white);
+    
+    margin-bottom: 2rem !important; /* INCREASED EXTERNAL MARGIN (2rem = 32px) */
+    transition: box-shadow 0.2s;
+}
+
+.card-tweet:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-tweet .card-body {
+    padding: 1.5rem 2rem; /* Increased horizontal padding to 2rem (32px) */
+}
+
+/* 7. PROFILE HERO (Final Tweaks) */
+.profile-header-card {
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 12px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: none;
+}
+
+.profile-cover {
+    height: 120px; /* Slightly taller for balance */
+    background: linear-gradient(135deg, var(--brand-color) 0%, #002171 100%);
+    border-radius: 11px 11px 0 0;
+}
+
+.profile-avatar-large {
+    width: 90px;  /* Optimized size */
+    height: 90px;
+    border: 4px solid white;
+    background-color: var(--brand-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    margin-top: -45px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 1.25rem; /* Smaller numbers */
+    font-weight: 700;
+    color: var(--brand-color);
+}
+.stat-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 8. LANDING PAGE HERO */
+.display-3 {
+    font-size: 3.5rem; /* Reduced from massive size */
+    font-weight: 800;
+    letter-spacing: -1px;
+}
